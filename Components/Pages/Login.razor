@@ -1,0 +1,58 @@
+﻿@page "/login"
+@rendermode InteractiveServer
+@inject NavigationManager Navigation
+
+<PageTitle>Login</PageTitle>
+
+<section class="pagina-login">
+
+    <a href="/" class="botao-voltar">
+        &#8592;
+    </a>
+
+    <div class="card-login">
+
+        <h1>Bem-vindo(a) de volta!</h1>
+
+        <p class="texto-login">
+            Faça login para continuar
+        </p>
+
+        <label>E-mail</label>
+
+        <input type="email" placeholder="Ex: anonimo34@gmail.com" />
+
+        <label>Senha</label>
+
+        <input type="password" placeholder="Digite sua senha" />
+
+        <a class="esqueci-senha" href="/novasenha">
+            Esqueceu sua senha?
+        </a>
+
+        <button type="button" @onclick="Entrar">
+            ENTRAR
+        </button>
+
+        <p class="cadastro">
+
+            Ainda não possui uma conta?
+
+            <a href="/cadastro">
+                Cadastre-se
+            </a>
+
+        </p>
+
+    </div>
+
+</section>
+
+@code {
+
+    private void Entrar()
+    {
+        Navigation.NavigateTo("/");
+    }
+
+}
