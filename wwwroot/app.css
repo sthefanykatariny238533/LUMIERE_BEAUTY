@@ -248,3 +248,107 @@ body {
         font-size: 16px;
         font-weight: bold;
     }
+
+
+
+
+.pagina-maquiagem {
+    background: #F9EDEE;
+    min-height: 100vh;
+}
+
+.banner-maquiagem {
+    background-image: url("/IMG/banner_maquiagem.png");
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    position: relative;
+}
+
+.voltar {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    color: white;
+    font-size: 45px;
+    text-decoration: none;
+}
+
+.titulo-banner {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+    .titulo-banner h1 {
+        color: #F4C8D0;
+        font-size: 50px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .titulo-banner p {
+        color: white;
+        margin-top: 8px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+.linha {
+    width: 130px;
+    height: 2px;
+    background: #F4C8D0;
+}
+
+.lista-servicos {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.servico {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+    .servico img {
+        width: 120px;
+        height: 140px;
+        border-radius: 6px;
+        object-fit: cover;
+    }
+
+.informacoes {
+    flex: 1;
+}
+
+    .informacoes h2 {
+        margin: 0;
+        font-size: 34px;
+        color: #4D4D4D;
+    }
+
+    .informacoes p {
+        margin-top: 10px;
+        font-size: 22px;
+        color: #444;
+    }
+
+    .informacoes a {
+        display: block;
+        margin-top: 18px;
+        color: #EA8AA3;
+        text-decoration: none;
+    }
+
+.seta {
+    text-decoration: none;
+    color: #333;
+    font-size: 55px;
+}
