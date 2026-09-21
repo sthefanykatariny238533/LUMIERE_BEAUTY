@@ -7,7 +7,7 @@ namespace Lumiere_Beauty.Configs
     public static class DAOHelper
     {
         // Lê uma string; se a coluna for NULL, devolve string vazia
-        public static string GetStrin(MySqlDataReader reader, string column_name)
+        public static string GetString(MySqlDataReader reader, string column_name)
         {
             string text = string.Empty;
             if (!reader.IsDBNull(reader.GetOrdinal(column_name)))

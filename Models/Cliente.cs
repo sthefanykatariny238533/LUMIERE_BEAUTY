@@ -2,13 +2,9 @@
 {
     public class Cliente
     {
-        public int id { get; set; }
-
-        public string nome_completo { get; set; }
-
-        public string email { get; set; }
-
-        public string senha { get; set; }
-
+        public int Id { get; set; }
+        public string NomeCompleto { get; set; } = string.Empty;
+        public string Email { get; set; } = string.Empty;
+        public string Senha { get; set; } = string.Empty;
     }
 }

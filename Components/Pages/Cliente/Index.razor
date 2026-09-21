@@ -1,0 +1,41 @@
+﻿@page "/clientes"
+
+@using Lumiere_Beauty.Models
+@using Lumiere_Beauty.DAO
+
+@inject ClienteDAO ClienteDAO
+
+<h1>Clientes - Lumière Beauty</h1>
+
+<h3>Consulta de Clientes</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome completo</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var cliente in clientes)
+        {
+            <tr>
+                <td>@cliente.Id</td>
+                <td>@cliente.NomeCompleto</td>
+                <td>@cliente.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private List<Cliente> clientes = new();
+
+    protected override void OnInitialized()
+    {
+        // Chama o DAO para buscar os dados no banco
+        clientes = ClienteDAO.Listar();
+    }
+}
