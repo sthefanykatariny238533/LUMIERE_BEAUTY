@@ -459,15 +459,10 @@ body {
 }
 
 /* ========= CABELO ==========*/
-/* ========= CABELO ========== */
-
 .pagina-cabelo {
     background: #F9EDEE;
     min-height: 100vh;
 }
-
-
-/* ---------- BANNER ---------- */
 
 .banner-cabelo {
     background-image: url("/Cabelo/banner-cabelo.png");
@@ -489,9 +484,6 @@ body {
     .voltar-cabelo:hover {
         color: #F4C8D0;
     }
-
-
-/* ---------- TÍTULO DO BANNER ---------- */
 
 .titulo-cabelo {
     height: 100%;
@@ -525,9 +517,6 @@ body {
         font-size: 22px;
     }
 
-
-/* ---------- LISTA DOS 6 SERVIÇOS ---------- */
-
 .lista-cabelo {
     max-width: 1100px;
     margin: 0 auto;
@@ -537,17 +526,11 @@ body {
     gap: 40px;
 }
 
-
-/* ---------- CADA SERVIÇO ---------- */
-
 .servico-cabelo {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
-
-    /* ---------- IMAGENS ---------- */
 
     .servico-cabelo img {
         width: 120px;
@@ -556,9 +539,6 @@ body {
         object-fit: cover;
         flex-shrink: 0;
     }
-
-
-/* ---------- INFORMAÇÕES ---------- */
 
 .informacoes-cabelo {
     flex: 1;
@@ -587,18 +567,12 @@ body {
             color: #D66F89;
         }
 
-
-/* ---------- SETA ---------- */
-
 .seta-cabelo {
     text-decoration: none;
     color: #333;
     font-size: 55px;
     flex-shrink: 0;
 }
-
-
-/* ---------- RESPONSIVO ---------- */
 
 @media (max-width: 800px) {
 
