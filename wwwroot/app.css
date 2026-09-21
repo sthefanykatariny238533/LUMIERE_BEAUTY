@@ -1799,3 +1799,1182 @@ body {
     }
 }
 
+/* ========== LIMPEZA DE PELE =========*/
+.pagina-limpeza {
+    min-height: 100vh;
+    background-color: #fffafa;
+    color: #333;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.cabecalho-limpeza {
+    position: relative;
+    width: 100%;
+    height: 95px;
+    background-color: #f8dddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.voltar {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 45px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .voltar:hover {
+        color: #e95d7b;
+    }
+
+.marca {
+    text-align: center;
+}
+
+    .marca h1 {
+        margin: 0;
+        color: #a74359;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 32px;
+        font-weight: normal;
+        letter-spacing: 2px;
+    }
+
+.subtitulo-marca {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    color: #a74359;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.conteudo-limpeza {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 45px 110px;
+    box-sizing: border-box;
+}
+
+.apresentacao-limpeza {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.imagem-limpeza {
+    width: 220px;
+    min-width: 220px;
+}
+
+    .imagem-limpeza img {
+        width: 220px;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        border-radius: 6px;
+    }
+
+.informacoes-limpeza {
+    flex: 1;
+}
+
+    .informacoes-limpeza h2 {
+        margin: 0 0 10px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 34px;
+        font-weight: normal;
+    }
+
+.descricao {
+    margin: 0 0 18px;
+    color: #444;
+    font-size: 22px;
+}
+
+.texto-descricao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.bloco-informacao {
+    margin-top: 30px;
+}
+
+    .bloco-informacao h3 {
+        margin: 0 0 12px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 26px;
+        font-weight: normal;
+    }
+
+.lista-beneficios {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+    .lista-beneficios li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        color: #555;
+        font-size: 18px;
+    }
+
+.check {
+    color: #f26382;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.duracao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+}
+
+.icone-relogio {
+    color: #f26382;
+    font-size: 22px;
+}
+
+
+.indicacao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.rodape-agendamento {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: #fffafa;
+    border-top: 1px solid #f1e3e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 55px;
+    box-sizing: border-box;
+}
+
+.preco {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+    .preco span {
+        color: #555;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 16px;
+    }
+
+    .preco strong {
+        color: #e65c79;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+.botao-agendar {
+    width: 230px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f45f7e;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .botao-agendar:hover {
+        background-color: #df4e6d;
+        transform: translateY(-1px);
+    }
+
+@media (max-width: 600px) {
+
+    .cabecalho-limpeza {
+        height: 85px;
+    }
+
+    .marca h1 {
+        font-size: 24px;
+    }
+
+    .subtitulo-marca {
+        font-size: 10px;
+    }
+
+    .conteudo-limpeza {
+        padding: 25px 25px 110px;
+    }
+
+    .apresentacao-limpeza {
+        gap: 15px;
+    }
+
+    .imagem-limpeza {
+        width: 120px;
+        min-width: 120px;
+    }
+
+        .imagem-limpeza img {
+            width: 120px;
+            height: 150px;
+        }
+
+    .informacoes-limpeza h2 {
+        font-size: 26px;
+    }
+
+    .descricao {
+        font-size: 17px;
+    }
+
+    .texto-descricao {
+        font-size: 15px;
+    }
+
+    .bloco-informacao h3 {
+        font-size: 22px;
+    }
+
+    .lista-beneficios li,
+    .duracao,
+    .indicacao {
+        font-size: 15px;
+    }
+
+    .rodape-agendamento {
+        padding: 0 25px;
+    }
+
+    .preco span {
+        font-size: 13px;
+    }
+
+    .preco strong {
+        font-size: 17px;
+    }
+
+    .botao-agendar {
+        width: 160px;
+        height: 38px;
+        font-size: 13px;
+    }
+}
+
+/* =================DESIGN DE SOBRANCELHAS===================*/
+.pagina-sobrancelhas {
+    min-height: 100vh;
+    background-color: #fffafa;
+    color: #333;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.cabecalho-sobrancelhas {
+    position: relative;
+    width: 100%;
+    height: 95px;
+    background-color: #f8dddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.voltar {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 45px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .voltar:hover {
+        color: #e95d7b;
+    }
+
+.marca {
+    text-align: center;
+}
+
+    .marca h1 {
+        margin: 0;
+        color: #a74359;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 32px;
+        font-weight: normal;
+        letter-spacing: 2px;
+    }
+
+.subtitulo-marca {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    color: #a74359;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.conteudo-sobrancelhas {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 45px 110px;
+    box-sizing: border-box;
+}
+
+.apresentacao-sobrancelhas {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.imagem-sobrancelhas {
+    width: 220px;
+    min-width: 220px;
+}
+
+    .imagem-sobrancelhas img {
+        width: 220px;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        border-radius: 6px;
+    }
+
+.informacoes-sobrancelhas {
+    flex: 1;
+}
+
+    .informacoes-sobrancelhas h2 {
+        margin: 0 0 10px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 34px;
+        font-weight: normal;
+    }
+
+.descricao {
+    margin: 0 0 18px;
+    color: #444;
+    font-size: 22px;
+}
+
+
+.texto-descricao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+.bloco-informacao {
+    margin-top: 30px;
+}
+
+    .bloco-informacao h3 {
+        margin: 0 0 12px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 26px;
+        font-weight: normal;
+    }
+
+.lista-beneficios {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+    .lista-beneficios li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        color: #555;
+        font-size: 18px;
+    }
+
+.check {
+    color: #f26382;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.duracao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+}
+
+.icone-relogio {
+    color: #f26382;
+    font-size: 22px;
+}
+
+
+.indicacao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.rodape-agendamento {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: #fffafa;
+    border-top: 1px solid #f1e3e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 55px;
+    box-sizing: border-box;
+}
+
+.preco {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+    .preco span {
+        color: #555;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 16px;
+    }
+
+    .preco strong {
+        color: #e65c79;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+.botao-agendar {
+    width: 230px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f45f7e;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .botao-agendar:hover {
+        background-color: #df4e6d;
+        transform: translateY(-1px);
+    }
+
+@media (max-width: 600px) {
+
+    .cabecalho-sobrancelhas {
+        height: 85px;
+    }
+
+    .marca h1 {
+        font-size: 24px;
+    }
+
+    .subtitulo-marca {
+        font-size: 10px;
+    }
+
+    .conteudo-sobrancelhas {
+        padding: 25px 25px 110px;
+    }
+
+    .apresentacao-sobrancelhas {
+        gap: 15px;
+    }
+
+    .imagem-sobrancelhas {
+        width: 120px;
+        min-width: 120px;
+    }
+
+        .imagem-sobrancelhas img {
+            width: 120px;
+            height: 150px;
+        }
+
+    .informacoes-sobrancelhas h2 {
+        font-size: 26px;
+    }
+
+    .descricao {
+        font-size: 17px;
+    }
+
+    .texto-descricao {
+        font-size: 15px;
+    }
+
+    .bloco-informacao h3 {
+        font-size: 22px;
+    }
+
+    .lista-beneficios li,
+    .duracao,
+    .indicacao {
+        font-size: 15px;
+    }
+
+    .rodape-agendamento {
+        padding: 0 25px;
+    }
+
+    .preco span {
+        font-size: 13px;
+    }
+
+    .preco strong {
+        font-size: 17px;
+    }
+
+    .botao-agendar {
+        width: 160px;
+        height: 38px;
+        font-size: 13px;
+    }
+}
+
+/* ============ EXTENSÃO DE CILIOS ==================*/
+
+.pagina-cilios {
+    min-height: 100vh;
+    background-color: #fffafa;
+    color: #333;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.cabecalho-cilios {
+    position: relative;
+    width: 100%;
+    height: 95px;
+    background-color: #f8dddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.voltar {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 45px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .voltar:hover {
+        color: #e95d7b;
+    }
+
+.marca {
+    text-align: center;
+}
+
+    .marca h1 {
+        margin: 0;
+        color: #a74359;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 32px;
+        font-weight: normal;
+        letter-spacing: 2px;
+    }
+
+.subtitulo-marca {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    color: #a74359;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.conteudo-cilios {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 45px 110px;
+    box-sizing: border-box;
+}
+
+.apresentacao-cilios {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.imagem-cilios {
+    width: 220px;
+    min-width: 220px;
+}
+
+    .imagem-cilios img {
+        width: 220px;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        border-radius: 6px;
+    }
+
+.informacoes-cilios {
+    flex: 1;
+}
+
+    .informacoes-cilios h2 {
+        margin: 0 0 10px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 34px;
+        font-weight: normal;
+    }
+
+.descricao {
+    margin: 0 0 18px;
+    color: #444;
+    font-size: 22px;
+}
+
+.texto-descricao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.bloco-informacao {
+    margin-top: 30px;
+}
+
+    .bloco-informacao h3 {
+        margin: 0 0 12px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 26px;
+        font-weight: normal;
+    }
+
+.lista-beneficios {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+    .lista-beneficios li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        color: #555;
+        font-size: 18px;
+    }
+
+.check {
+    color: #f26382;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.duracao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+}
+
+.icone-relogio {
+    color: #f26382;
+    font-size: 22px;
+}
+
+.indicacao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.rodape-agendamento {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: #fffafa;
+    border-top: 1px solid #f1e3e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 55px;
+    box-sizing: border-box;
+}
+
+.preco {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+    .preco span {
+        color: #555;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 16px;
+    }
+
+    .preco strong {
+        color: #e65c79;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+.botao-agendar {
+    width: 230px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f45f7e;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .botao-agendar:hover {
+        background-color: #df4e6d;
+        transform: translateY(-1px);
+    }
+
+@media (max-width: 600px) {
+
+    .cabecalho-cilios {
+        height: 85px;
+    }
+
+    .marca h1 {
+        font-size: 24px;
+    }
+
+    .subtitulo-marca {
+        font-size: 10px;
+    }
+
+    .conteudo-cilios {
+        padding: 25px 25px 110px;
+    }
+
+    .apresentacao-cilios {
+        gap: 15px;
+    }
+
+    .imagem-cilios {
+        width: 120px;
+        min-width: 120px;
+    }
+
+        .imagem-cilios img {
+            width: 120px;
+            height: 150px;
+        }
+
+    .informacoes-cilios h2 {
+        font-size: 26px;
+    }
+
+    .descricao {
+        font-size: 17px;
+    }
+
+    .texto-descricao {
+        font-size: 15px;
+    }
+
+    .bloco-informacao h3 {
+        font-size: 22px;
+    }
+
+    .lista-beneficios li,
+    .duracao,
+    .indicacao {
+        font-size: 15px;
+    }
+
+    .rodape-agendamento {
+        padding: 0 25px;
+    }
+
+    .preco span {
+        font-size: 13px;
+    }
+
+    .preco strong {
+        font-size: 17px;
+    }
+
+    .botao-agendar {
+        width: 160px;
+        height: 38px;
+        font-size: 13px;
+    }
+}
+
+/* ========== PEELING =============*/
+
+.pagina-peeling {
+    min-height: 100vh;
+    background-color: #fffafa;
+    color: #333;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.cabecalho-peeling {
+    position: relative;
+    width: 100%;
+    height: 95px;
+    background-color: #f8dddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.voltar {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 45px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .voltar:hover {
+        color: #e95d7b;
+    }
+
+.marca {
+    text-align: center;
+}
+
+    .marca h1 {
+        margin: 0;
+        color: #a74359;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 32px;
+        font-weight: normal;
+        letter-spacing: 2px;
+    }
+
+.subtitulo-marca {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    color: #a74359;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.conteudo-peeling {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 45px 110px;
+    box-sizing: border-box;
+}
+
+.apresentacao-peeling {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.imagem-peeling {
+    width: 220px;
+    min-width: 220px;
+}
+
+    .imagem-peeling img {
+        width: 220px;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        border-radius: 6px;
+    }
+
+.informacoes-peeling {
+    flex: 1;
+}
+
+    .informacoes-peeling h2 {
+        margin: 0 0 10px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 34px;
+        font-weight: normal;
+    }
+
+.descricao {
+    margin: 0 0 18px;
+    color: #444;
+    font-size: 22px;
+}
+
+.texto-descricao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.bloco-informacao {
+    margin-top: 30px;
+}
+
+    .bloco-informacao h3 {
+        margin: 0 0 12px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 26px;
+        font-weight: normal;
+    }
+
+
+.lista-beneficios {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+    .lista-beneficios li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        color: #555;
+        font-size: 18px;
+    }
+
+.check {
+    color: #f26382;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.duracao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+}
+
+.icone-relogio {
+    color: #f26382;
+    font-size: 22px;
+}
+
+.indicacao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.rodape-agendamento {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: #fffafa;
+    border-top: 1px solid #f1e3e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 55px;
+    box-sizing: border-box;
+}
+
+.preco {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+    .preco span {
+        color: #555;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 16px;
+    }
+
+    .preco strong {
+        color: #e65c79;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+.botao-agendar {
+    width: 230px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f45f7e;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .botao-agendar:hover {
+        background-color: #df4e6d;
+        transform: translateY(-1px);
+    }
+
+@media (max-width: 600px) {
+
+    .cabecalho-peeling {
+        height: 85px;
+    }
+
+    .marca h1 {
+        font-size: 24px;
+    }
+
+    .subtitulo-marca {
+        font-size: 10px;
+    }
+
+    .conteudo-peeling {
+        padding: 25px 25px 110px;
+    }
+
+    .apresentacao-peeling {
+        gap: 15px;
+    }
+
+    .imagem-peeling {
+        width: 120px;
+        min-width: 120px;
+    }
+
+        .imagem-peeling img {
+            width: 120px;
+            height: 150px;
+        }
+
+    .informacoes-peeling h2 {
+        font-size: 26px;
+    }
+
+    .descricao {
+        font-size: 17px;
+    }
+
+    .texto-descricao {
+        font-size: 15px;
+    }
+
+    .bloco-informacao h3 {
+        font-size: 22px;
+    }
+
+    .lista-beneficios li,
+    .duracao,
+    .indicacao {
+        font-size: 15px;
+    }
+
+    .rodape-agendamento {
+        padding: 0 25px;
+    }
+
+    .preco span {
+        font-size: 13px;
+    }
+
+    .preco strong {
+        font-size: 17px;
+    }
+
+    .botao-agendar {
+        width: 160px;
+        height: 38px;
+        font-size: 13px;
+    }
+}
