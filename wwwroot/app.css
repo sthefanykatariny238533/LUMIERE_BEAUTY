@@ -457,3 +457,198 @@ body {
     color: #333;
     font-size: 55px;
 }
+
+/* ========= CABELO ==========*/
+/* ========= CABELO ========== */
+
+.pagina-cabelo {
+    background: #F9EDEE;
+    min-height: 100vh;
+}
+
+
+/* ---------- BANNER ---------- */
+
+.banner-cabelo {
+    background-image: url("/Cabelo/banner-cabelo.png");
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    position: relative;
+}
+
+.voltar-cabelo {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    color: white;
+    font-size: 45px;
+    text-decoration: none;
+}
+
+    .voltar-cabelo:hover {
+        color: #F4C8D0;
+    }
+
+
+/* ---------- TÍTULO DO BANNER ---------- */
+
+.titulo-cabelo {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.linha-cabelo {
+    width: 130px;
+    height: 2px;
+    background: #F4C8D0;
+}
+
+.texto-cabelo {
+    text-align: center;
+}
+
+    .texto-cabelo h1 {
+        color: #F4C8D0;
+        font-size: 50px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .texto-cabelo p {
+        color: white;
+        margin-top: 8px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+
+/* ---------- LISTA DOS 6 SERVIÇOS ---------- */
+
+.lista-cabelo {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+
+/* ---------- CADA SERVIÇO ---------- */
+
+.servico-cabelo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+
+    /* ---------- IMAGENS ---------- */
+
+    .servico-cabelo img {
+        width: 120px;
+        height: 140px;
+        border-radius: 6px;
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+
+/* ---------- INFORMAÇÕES ---------- */
+
+.informacoes-cabelo {
+    flex: 1;
+}
+
+    .informacoes-cabelo h2 {
+        margin: 0;
+        font-size: 34px;
+        color: #4D4D4D;
+    }
+
+    .informacoes-cabelo p {
+        margin-top: 10px;
+        font-size: 22px;
+        color: #444;
+    }
+
+    .informacoes-cabelo a {
+        display: block;
+        margin-top: 18px;
+        color: #EA8AA3;
+        text-decoration: none;
+    }
+
+        .informacoes-cabelo a:hover {
+            color: #D66F89;
+        }
+
+
+/* ---------- SETA ---------- */
+
+.seta-cabelo {
+    text-decoration: none;
+    color: #333;
+    font-size: 55px;
+    flex-shrink: 0;
+}
+
+
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 800px) {
+
+    .lista-cabelo {
+        grid-template-columns: 1fr;
+        max-width: 650px;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .banner-cabelo {
+        height: 200px;
+    }
+
+    .titulo-cabelo {
+        gap: 10px;
+    }
+
+    .linha-cabelo {
+        width: 50px;
+    }
+
+    .texto-cabelo h1 {
+        font-size: 38px;
+    }
+
+    .texto-cabelo p {
+        font-size: 16px;
+    }
+
+    .lista-cabelo {
+        padding: 30px 20px;
+    }
+
+    .servico-cabelo img {
+        width: 100px;
+        height: 120px;
+    }
+
+    .informacoes-cabelo h2 {
+        font-size: 26px;
+    }
+
+    .informacoes-cabelo p {
+        font-size: 17px;
+    }
+
+    .seta-cabelo {
+        font-size: 45px;
+    }
+}
