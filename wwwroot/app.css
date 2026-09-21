@@ -626,3 +626,1176 @@ body {
         font-size: 45px;
     }
 }
+/* MAQUIAGEM SOCIAL*/
+
+.pagina-social {
+    min-height: 100vh;
+    background-color: #fffafa;
+    color: #333;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.cabecalho-social {
+    position: relative;
+    width: 100%;
+    height: 95px;
+    background-color: #f8dddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.voltar {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 45px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .voltar:hover {
+        color: #e95d7b;
+    }
+
+.marca {
+    text-align: center;
+}
+
+    .marca h1 {
+        margin: 0;
+        color: #a74359;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 32px;
+        font-weight: normal;
+        letter-spacing: 2px;
+    }
+
+.subtitulo-marca {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    color: #a74359;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.conteudo-social {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 45px 110px;
+    box-sizing: border-box;
+}
+
+.apresentacao-social {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.imagem-social {
+    width: 220px;
+    min-width: 220px;
+}
+
+    .imagem-social img {
+        width: 220px;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        border-radius: 6px;
+    }
+
+.informacoes-social {
+    flex: 1;
+}
+
+    .informacoes-social h2 {
+        margin: 0 0 10px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 34px;
+        font-weight: normal;
+    }
+
+.descricao {
+    margin: 0 0 18px;
+    color: #444;
+    font-size: 22px;
+}
+
+.texto-descricao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.bloco-informacao {
+    margin-top: 30px;
+}
+
+    .bloco-informacao h3 {
+        margin: 0 0 12px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 26px;
+        font-weight: normal;
+    }
+
+.lista-beneficios {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+    .lista-beneficios li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        color: #555;
+        font-size: 18px;
+    }
+
+.check {
+    color: #f26382;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.duracao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+}
+
+.icone-relogio {
+    color: #f26382;
+    font-size: 22px;
+}
+
+.indicacao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.rodape-agendamento {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: #fffafa;
+    border-top: 1px solid #f1e3e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 55px;
+    box-sizing: border-box;
+}
+
+.preco {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+    .preco span {
+        color: #555;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 16px;
+    }
+
+    .preco strong {
+        color: #e65c79;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+.botao-agendar {
+    width: 230px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f45f7e;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .botao-agendar:hover {
+        background-color: #df4e6d;
+        transform: translateY(-1px);
+    }
+
+@media (max-width: 600px) {
+
+    .cabecalho-social {
+        height: 85px;
+    }
+
+    .marca h1 {
+        font-size: 24px;
+    }
+
+    .subtitulo-marca {
+        font-size: 10px;
+    }
+
+    .conteudo-social {
+        padding: 25px 25px 110px;
+    }
+
+    .apresentacao-social {
+        gap: 15px;
+    }
+
+    .imagem-social {
+        width: 120px;
+        min-width: 120px;
+    }
+
+        .imagem-social img {
+            width: 120px;
+            height: 150px;
+        }
+
+    .informacoes-social h2 {
+        font-size: 26px;
+    }
+
+    .descricao {
+        font-size: 17px;
+    }
+
+    .texto-descricao {
+        font-size: 15px;
+    }
+
+    .bloco-informacao h3 {
+        font-size: 22px;
+    }
+
+    .lista-beneficios li,
+    .duracao,
+    .indicacao {
+        font-size: 15px;
+    }
+
+    .rodape-agendamento {
+        padding: 0 25px;
+    }
+
+    .preco span {
+        font-size: 13px;
+    }
+
+    .preco strong {
+        font-size: 17px;
+    }
+
+    .botao-agendar {
+        width: 160px;
+        height: 38px;
+        font-size: 13px;
+    }
+}
+
+/*MAQUIAGEM CASUAL*/
+.pagina-casual {
+    min-height: 100vh;
+    background-color: #fffafa;
+    color: #333;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.cabecalho-casual {
+    position: relative;
+    width: 100%;
+    height: 95px;
+    background-color: #f8dddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.voltar {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 45px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .voltar:hover {
+        color: #e95d7b;
+    }
+
+.marca {
+    text-align: center;
+}
+
+    .marca h1 {
+        margin: 0;
+        color: #a74359;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 32px;
+        font-weight: normal;
+        letter-spacing: 2px;
+    }
+
+.subtitulo-marca {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    color: #a74359;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.conteudo-casual{
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 45px 110px;
+    box-sizing: border-box;
+}
+
+.apresentacao-casual {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.imagem-casual {
+    width: 220px;
+    min-width: 220px;
+}
+
+    .imagem-casual img {
+        width: 220px;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        border-radius: 6px;
+    }
+
+.informacoes-casual {
+    flex: 1;
+}
+
+    .informacoes-casual h2 {
+        margin: 0 0 10px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 34px;
+        font-weight: normal;
+    }
+
+.descricao {
+    margin: 0 0 18px;
+    color: #444;
+    font-size: 22px;
+}
+
+.texto-descricao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.bloco-informacao {
+    margin-top: 30px;
+}
+
+    .bloco-informacao h3 {
+        margin: 0 0 12px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 26px;
+        font-weight: normal;
+    }
+
+.lista-beneficios {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+    .lista-beneficios li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        color: #555;
+        font-size: 18px;
+    }
+
+.check {
+    color: #f26382;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.duracao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+}
+
+.icone-relogio {
+    color: #f26382;
+    font-size: 22px;
+}
+
+.indicacao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.rodape-agendamento {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: #fffafa;
+    border-top: 1px solid #f1e3e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 55px;
+    box-sizing: border-box;
+}
+
+.preco {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+    .preco span {
+        color: #555;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 16px;
+    }
+
+    .preco strong {
+        color: #e65c79;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+.botao-agendar {
+    width: 230px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f45f7e;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .botao-agendar:hover {
+        background-color: #df4e6d;
+        transform: translateY(-1px);
+    }
+
+@media (max-width: 600px) {
+
+    .cabecalho-casual {
+        height: 85px;
+    }
+
+    .marca h1 {
+        font-size: 24px;
+    }
+
+    .subtitulo-marca {
+        font-size: 10px;
+    }
+
+    .conteudo-casual {
+        padding: 25px 25px 110px;
+    }
+
+    .apresentacao-casual {
+        gap: 15px;
+    }
+
+    .imagem-casual {
+        width: 120px;
+        min-width: 120px;
+    }
+
+        .imagem-casual img {
+            width: 120px;
+            height: 150px;
+        }
+
+    .informacoes-casual h2 {
+        font-size: 26px;
+    }
+
+    .descricao {
+        font-size: 17px;
+    }
+
+    .texto-descricao {
+        font-size: 15px;
+    }
+
+    .bloco-informacao h3 {
+        font-size: 22px;
+    }
+
+    .lista-beneficios li,
+    .duracao,
+    .indicacao {
+        font-size: 15px;
+    }
+
+    .rodape-agendamento {
+        padding: 0 25px;
+    }
+
+    .preco span {
+        font-size: 13px;
+    }
+
+    .preco strong {
+        font-size: 17px;
+    }
+
+    .botao-agendar {
+        width: 160px;
+        height: 38px;
+        font-size: 13px;
+    }
+}
+
+/* MAQUIAGEM NOIVA*/
+.pagina-noiva {
+    min-height: 100vh;
+    background-color: #fffafa;
+    color: #333;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.cabecalho-noiva {
+    position: relative;
+    width: 100%;
+    height: 95px;
+    background-color: #f8dddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.voltar {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 45px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .voltar:hover {
+        color: #e95d7b;
+    }
+
+.marca {
+    text-align: center;
+}
+
+    .marca h1 {
+        margin: 0;
+        color: #a74359;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 32px;
+        font-weight: normal;
+        letter-spacing: 2px;
+    }
+
+.subtitulo-marca {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    color: #a74359;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.conteudo-noiva {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 45px 110px;
+    box-sizing: border-box;
+}
+
+.apresentacao-noiva {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.imagem-noiva {
+    width: 220px;
+    min-width: 220px;
+}
+
+    .imagem-noiva img {
+        width: 220px;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        border-radius: 6px;
+    }
+
+.informacoes-noiva {
+    flex: 1;
+}
+
+    .informacoes-noiva h2 {
+        margin: 0 0 10px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 34px;
+        font-weight: normal;
+    }
+
+.descricao {
+    margin: 0 0 18px;
+    color: #444;
+    font-size: 22px;
+}
+
+.texto-descricao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.bloco-informacao {
+    margin-top: 30px;
+}
+
+    .bloco-informacao h3 {
+        margin: 0 0 12px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 26px;
+        font-weight: normal;
+    }
+
+.lista-beneficios {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+    .lista-beneficios li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        color: #555;
+        font-size: 18px;
+    }
+
+.check {
+    color: #f26382;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.duracao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+}
+
+.icone-relogio {
+    color: #f26382;
+    font-size: 22px;
+}
+
+.indicacao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.rodape-agendamento {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: #fffafa;
+    border-top: 1px solid #f1e3e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 55px;
+    box-sizing: border-box;
+}
+
+.preco {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+    .preco span {
+        color: #555;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 16px;
+    }
+
+    .preco strong {
+        color: #e65c79;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+.botao-agendar {
+    width: 230px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f45f7e;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .botao-agendar:hover {
+        background-color: #df4e6d;
+        transform: translateY(-1px);
+    }
+
+@media (max-width: 600px) {
+
+    .cabecalho-noiva {
+        height: 85px;
+    }
+
+    .marca h1 {
+        font-size: 24px;
+    }
+
+    .subtitulo-marca {
+        font-size: 10px;
+    }
+
+    .conteudo-noiva {
+        padding: 25px 25px 110px;
+    }
+
+    .apresentacao-noiva {
+        gap: 15px;
+    }
+
+    .imagem-noiva {
+        width: 120px;
+        min-width: 120px;
+    }
+
+        .imagem-noiva img {
+            width: 120px;
+            height: 150px;
+        }
+
+    .informacoes-noiva h2 {
+        font-size: 26px;
+    }
+
+    .descricao {
+        font-size: 17px;
+    }
+
+    .texto-descricao {
+        font-size: 15px;
+    }
+
+    .bloco-informacao h3 {
+        font-size: 22px;
+    }
+
+    .lista-beneficios li,
+    .duracao,
+    .indicacao {
+        font-size: 15px;
+    }
+
+    .rodape-agendamento {
+        padding: 0 25px;
+    }
+
+    .preco span {
+        font-size: 13px;
+    }
+
+    .preco strong {
+        font-size: 17px;
+    }
+
+    .botao-agendar {
+        width: 160px;
+        height: 38px;
+        font-size: 13px;
+    }
+}
+
+/* MAQUIAGEM ARTÍSTICA*/
+.pagina-artistica {
+    min-height: 100vh;
+    background-color: #fffafa;
+    color: #333;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.cabecalho-artistica {
+    position: relative;
+    width: 100%;
+    height: 95px;
+    background-color: #f8dddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.voltar {
+    position: absolute;
+    left: 25px;
+    top: 25px;
+    color: white;
+    text-decoration: none;
+    font-size: 45px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .voltar:hover {
+        color: #e95d7b;
+    }
+
+.marca {
+    text-align: center;
+}
+
+    .marca h1 {
+        margin: 0;
+        color: #a74359;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 32px;
+        font-weight: normal;
+        letter-spacing: 2px;
+    }
+
+.subtitulo-marca {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    color: #a74359;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.conteudo-artistica {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 45px 110px;
+    box-sizing: border-box;
+}
+
+.apresentacao-artistica {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.imagem-artistica {
+    width: 220px;
+    min-width: 220px;
+}
+
+    .imagem-artistica img {
+        width: 220px;
+        height: 250px;
+        object-fit: cover;
+        display: block;
+        border-radius: 6px;
+    }
+
+.informacoes-artistica {
+    flex: 1;
+}
+
+    .informacoes-artistica h2 {
+        margin: 0 0 10px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 34px;
+        font-weight: normal;
+    }
+
+.descricao {
+    margin: 0 0 18px;
+    color: #444;
+    font-size: 22px;
+}
+
+.texto-descricao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.bloco-informacao {
+    margin-top: 30px;
+}
+
+    .bloco-informacao h3 {
+        margin: 0 0 12px;
+        color: #4D4D4D;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 26px;
+        font-weight: normal;
+    }
+
+.lista-beneficios {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+    .lista-beneficios li {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+        color: #555;
+        font-size: 18px;
+    }
+
+.check {
+    color: #f26382;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.duracao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+}
+
+.icone-relogio {
+    color: #f26382;
+    font-size: 22px;
+}
+
+.indicacao {
+    max-width: 650px;
+    margin: 0;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.rodape-agendamento {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    background-color: #fffafa;
+    border-top: 1px solid #f1e3e5;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 55px;
+    box-sizing: border-box;
+}
+
+.preco {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+    .preco span {
+        color: #555;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 16px;
+    }
+
+    .preco strong {
+        color: #e65c79;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 20px;
+        font-weight: normal;
+    }
+
+.botao-agendar {
+    width: 230px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f45f7e;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-weight: normal;
+    transition: 0.2s;
+}
+
+    .botao-agendar:hover {
+        background-color: #df4e6d;
+        transform: translateY(-1px);
+    }
+
+@media (max-width: 600px) {
+
+    .cabecalho-artistica {
+        height: 85px;
+    }
+
+    .marca h1 {
+        font-size: 24px;
+    }
+
+    .subtitulo-marca {
+        font-size: 10px;
+    }
+
+    .conteudo-artistica{
+        padding: 25px 25px 110px;
+    }
+
+    .apresentacao-artistica {
+        gap: 15px;
+    }
+
+    .imagem-artistica{
+        width: 120px;
+        min-width: 120px;
+    }
+
+        .imagem-artistica img {
+            width: 120px;
+            height: 150px;
+        }
+
+    .informacoes-artistica h2 {
+        font-size: 26px;
+    }
+
+    .descricao {
+        font-size: 17px;
+    }
+
+    .texto-descricao {
+        font-size: 15px;
+    }
+
+    .bloco-informacao h3 {
+        font-size: 22px;
+    }
+
+    .lista-beneficios li,
+    .duracao,
+    .indicacao {
+        font-size: 15px;
+    }
+
+    .rodape-agendamento {
+        padding: 0 25px;
+    }
+
+    .preco span {
+        font-size: 13px;
+    }
+
+    .preco strong {
+        font-size: 17px;
+    }
+
+    .botao-agendar {
+        width: 160px;
+        height: 38px;
+        font-size: 13px;
+    }
+}
+
