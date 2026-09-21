@@ -2,9 +2,9 @@
 {
     public class Servico
     {
-        public int id_servico { get; set; }
+        public int id { get; set; }
 
-        public string nome_serv { get; set; }
+        public string nome { get; set; }
 
         public string descricao { get; set; }
 
