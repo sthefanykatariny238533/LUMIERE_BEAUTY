@@ -2,8 +2,8 @@
 {
     public class Categoria
     {
-        public int id_categoria { get; set; }
+        public int id { get; set; }
 
-        public string nome_catego { get; set; }
+        public string nome { get; set; }
     }
 }
