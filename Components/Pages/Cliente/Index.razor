@@ -9,7 +9,6 @@
 
 <section class="pagina-clientes">
 
-    <!-- MENU SUPERIOR -->
     <header class="cabecalho">
 
         <nav class="menu-navegacao">
@@ -57,13 +56,10 @@
                 <span>Sthefany</span>
 
             </div>
-
         </div>
-
     </header>
 
 
-    <!-- BANNER -->
     <section class="banner-clientes">
 
         <div class="titulo-banner-clientes">
@@ -75,42 +71,30 @@
                 <h1>CLIENTES</h1>
 
                 <p>Consulta de clientes cadastrados.</p>
-
             </div>
 
             <div class="linha-clientes"></div>
-
         </div>
-
     </section>
 
-
-    <!-- LISTAGEM DOS CLIENTES -->
     <section class="area-clientes">
 
         <div class="cabecalho-clientes">
 
             <h2>Clientes cadastrados</h2>
 
-            <p>
-                Confira os clientes registrados no sistema Lumière Beauty.
-            </p>
-
+            <p> Confira os clientes registrados no sistema Lumière Beauty.</p>
         </div>
 
 
         <div class="tabela-clientes">
-
             <table>
-
                 <thead>
-
                     <tr>
                         <th>Id</th>
                         <th>Nome completo</th>
                         <th>E-mail</th>
                     </tr>
-
                 </thead>
 
                 <tbody>
@@ -118,29 +102,19 @@
                     @foreach (var cliente in clientes)
                     {
                         <tr>
-
                             <td>@cliente.Id</td>
-
                             <td>@cliente.NomeCompleto</td>
-
                             <td>@cliente.Email</td>
-
                         </tr>
                     }
-
                 </tbody>
-
             </table>
-
         </div>
-
     </section>
-
 </section>
 
 
 @code {
-
     private List<Cliente> clientes = new();
 
     protected override void OnInitialized()
@@ -148,5 +122,4 @@
         // Chama o DAO para buscar os dados no banco
         clientes = ClienteDAO.Listar();
     }
-
 }

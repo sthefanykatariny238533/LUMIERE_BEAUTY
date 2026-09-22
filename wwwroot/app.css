@@ -2979,7 +2979,7 @@ body {
     }
 }
 
-/* CLIENTES */
+/*============== CLIENTES ==================*/
 
 .pagina-clientes {
     background: #F9EDEE;
@@ -2988,8 +2988,6 @@ body {
     overflow: hidden;
 }
 
-
-    /* FUNDO ÚNICO DE FOLHAS */
 
     .pagina-clientes::before {
         content: "";
@@ -3006,8 +3004,6 @@ body {
     }
 
 
-    /* MENU SUPERIOR */
-
     .pagina-clientes .cabecalho {
         position: relative;
         z-index: 1;
@@ -3018,8 +3014,6 @@ body {
         padding: 25px 55px;
     }
 
-
-    /* MENU DE NAVEGAÇÃO */
 
     .pagina-clientes .menu-navegacao {
         display: flex;
@@ -3043,17 +3037,11 @@ body {
                 border-bottom: 2px solid #F4C8D0;
             }
 
-
-    /* LADO DIREITO */
-
     .pagina-clientes .lado-direito {
         display: flex;
         align-items: center;
         gap: 25px;
     }
-
-
-    /* REDES SOCIAIS */
 
     .pagina-clientes .redes-sociais {
         display: flex;
@@ -3066,9 +3054,6 @@ body {
             height: 18px;
             object-fit: contain;
         }
-
-
-    /* PERFIL */
 
     .pagina-clientes .perfil {
         display: flex;
@@ -3089,18 +3074,12 @@ body {
             font-size: 16px;
         }
 
-
-    /* BANNER */
-
     .pagina-clientes .banner-clientes {
         position: relative;
         z-index: 1;
         background: transparent !important;
         height: 220px;
     }
-
-
-/* BOTÃO VOLTAR */
 
 .banner-clientes .voltar {
     position: absolute;
@@ -3111,9 +3090,6 @@ body {
     text-decoration: none;
     z-index: 2;
 }
-
-
-/* TÍTULO */
 
 .titulo-banner-clientes {
     height: 100%;
@@ -3144,17 +3120,11 @@ body {
         font-size: 22px;
     }
 
-
-/* LINHAS DO TÍTULO */
-
 .linha-clientes {
     width: 130px;
     height: 2px;
     background: #F4C8D0;
 }
-
-
-/* ÁREA DA TABELA */
 
 .area-clientes {
     position: relative;
@@ -3163,9 +3133,6 @@ body {
     margin: 0 auto;
     padding: 40px;
 }
-
-
-/* CABEÇALHO DA TABELA */
 
 .cabecalho-clientes {
     text-align: center;
@@ -3183,9 +3150,6 @@ body {
         font-size: 18px;
         color: #555;
     }
-
-
-/* TABELA */
 
 .tabela-clientes {
     width: 100%;
@@ -3219,24 +3183,15 @@ body {
         background: #FFF5F7;
     }
 
-
-    /* COLUNA ID */
-
     .tabela-clientes th:first-child,
     .tabela-clientes td:first-child {
         width: 80px;
         text-align: center;
     }
 
-
-    /* COLUNA NOME */
-
     .tabela-clientes th:nth-child(2) {
         width: 40%;
     }
-
-
-    /* COLUNA E-MAIL */
 
     .tabela-clientes th:nth-child(3) {
         width: 40%;
