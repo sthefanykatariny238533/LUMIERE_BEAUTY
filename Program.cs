@@ -10,6 +10,8 @@ builder.Services.AddRazorComponents()
 // Configuração da Conexão com o Banco de Dados MySQL
 builder.Services.AddScoped<Conexao>();
 builder.Services.AddScoped<ClienteDAO>();
+builder.Services.AddScoped<AgendamentoDAO>();
+
 
 var app = builder.Build();
 
@@ -18,10 +20,7 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
 }
 
-app.UseStatusCodePagesWithReExecute(
-    "/not-found",
-    createScopeForStatusCodePages: true
-);
+app.UseStatusCodePagesWithReExecute("/not-found",createScopeForStatusCodePages: true);
 
 app.UseAntiforgery();
 
