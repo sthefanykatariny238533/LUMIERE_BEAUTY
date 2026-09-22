@@ -1,6 +1,5 @@
 ﻿using Lumiere_Beauty.Configs;
 using Lumiere_Beauty.Models;
-using MySql.Data.MySqlClient;
 
 namespace Lumiere_Beauty.DAO
 {
@@ -8,52 +7,44 @@ namespace Lumiere_Beauty.DAO
     {
         private readonly Conexao _conexao;
 
-        // A Conexao é injetada pelo container de dependências
         public ClienteDAO(Conexao conexao)
         {
             _conexao = conexao;
         }
 
-        // READ — lista todos os clientes
         public List<Cliente> Listar()
         {
-            var lista = new List<Cliente>();
-
-            var comando = _conexao.CreateCommand("SELECT * FROM Cliente;");
-
-            var leitor = (MySqlDataReader)comando.ExecuteReader();
-
-            while (leitor.Read())
+            try
             {
-                lista.Add(MapearCliente(leitor));
+                var lista = new List<Cliente>();
+
+                // Buscando e abrindo a Conexão com o banco de dados
+                using var con = _conexao.GetConnection();
+
+                string sql = "SELECT * FROM Cliente";
+                using var comando = con.CreateCommand();
+                comando.CommandText = sql;
+
+                using var leitor = comando.ExecuteReader();
+
+                while (leitor.Read())
+                {
+                    var cliente = new Cliente();
+
+                    cliente.Id = leitor.GetInt32("id_cliente");
+                    cliente.NomeCompleto = leitor.GetString("nome_completo_cli");
+                    cliente.Email = leitor.GetString("email_cli");
+                    cliente.Senha = leitor.GetString("senha_cli");
+
+                    lista.Add(cliente);
+                }
+
+                return lista;
             }
-
-            return lista;
-        }
-
-        // Método auxiliar: converte a linha atual do leitor em um objeto Cliente.
-        // Usa o DAOHelper para ler com segurança as colunas que podem ser NULL.
-        private static Cliente MapearCliente(MySqlDataReader leitor)
-        {
-            return new Cliente
+            catch
             {
-                Id = leitor.GetInt32("id_cliente"),
-
-                NomeCompleto = DAOHelper.GetString(
-                    leitor,
-                    "nome_completo_cli"
-                ),
-
-                Email = DAOHelper.GetString(
-                    leitor,
-                    "email_cli"
-                ),
-
-                Senha = DAOHelper.GetString(
-                    leitor,
-                    "senha_cli"
-                )
-            };
+                throw;
+            }
         }
     }
 }
