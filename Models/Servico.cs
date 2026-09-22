@@ -2,14 +2,10 @@
 {
     public class Servico
     {
-        public int id { get; set; }
-
-        public string nome { get; set; }
-
-        public string descricao { get; set; }
-
-        public string preco { get; set; }
-
-        public int id_categoria_fk { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; } = string.Empty;
+        public string Descricao { get; set; } = string.Empty;
+        public double Preco { get; set; }
+        public int IdCategoria { get; set; }
     }
 }

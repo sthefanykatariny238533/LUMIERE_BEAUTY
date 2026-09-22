@@ -3196,3 +3196,136 @@ body {
     .tabela-clientes th:nth-child(3) {
         width: 40%;
     }
+
+    /* ================ SERVIÇOS ==================*/
+
+.pagina-servicos {
+    background: #F9EDEE;
+    min-height: 100vh;
+}
+
+
+/* BANNER */
+
+.banner-servicos {
+    background-image: url("/IMG/folhas.png");
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    position: relative;
+}
+
+.titulo-banner-servicos {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.texto-banner-servicos {
+    text-align: center;
+}
+
+    .texto-banner-servicos h1 {
+        color: #F4C8D0;
+        font-size: 50px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .texto-banner-servicos p {
+        color: white;
+        margin-top: 8px;
+        text-align: center;
+        font-size: 22px;
+    }
+
+.linha-servicos {
+    width: 130px;
+    height: 2px;
+    background: #F4C8D0;
+}
+
+
+/* ÁREA DA TABELA */
+
+.area-servicos {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.cabecalho-servicos {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .cabecalho-servicos h2 {
+        margin: 0;
+        font-size: 34px;
+        color: #4D4D4D;
+    }
+
+    .cabecalho-servicos p {
+        margin-top: 10px;
+        font-size: 18px;
+        color: #555;
+    }
+
+
+/* TABELA */
+
+.tabela-servicos {
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+    .tabela-servicos table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .tabela-servicos th {
+        background: #E8B8C6;
+        color: #4D4D4D;
+        padding: 18px;
+        font-size: 19px;
+        text-align: left;
+    }
+
+    .tabela-servicos td {
+        padding: 18px;
+        font-size: 18px;
+        color: #444;
+        border-bottom: 1px solid #EAD9DD;
+    }
+
+    .tabela-servicos tbody tr:hover {
+        background: #FFF5F7;
+    }
+
+    .tabela-servicos th:first-child,
+    .tabela-servicos td:first-child {
+        width: 70px;
+        text-align: center;
+    }
+
+    .tabela-servicos th:nth-child(2) {
+        width: 25%;
+    }
+
+    .tabela-servicos th:nth-child(3) {
+        width: 35%;
+    }
+
+    .tabela-servicos th:nth-child(4) {
+        width: 15%;
+    }
+
+    .tabela-servicos th:nth-child(5) {
+        width: 15%;
+    }

@@ -1,0 +1,83 @@
+﻿@page "/servicos"
+
+@using Lumiere_Beauty.Models
+@using Lumiere_Beauty.DAO
+
+@inject ServicoDAO ServicoDAO
+
+<PageTitle>Serviços - Lumière Beauty</PageTitle>
+
+<section class="pagina-servicos">
+
+    <section class="banner-servicos">
+
+        <div class="titulo-banner-servicos">
+
+            <div class="linha-servicos"></div>
+
+            <div class="texto-banner-servicos">
+                <h1>SERVIÇOS</h1>
+                <p>Confira os serviços disponíveis no Lumière Beauty.</p>
+            </div>
+
+            <div class="linha-servicos"></div>
+
+        </div>
+
+    </section>
+
+    <section class="area-servicos">
+
+        <div class="cabecalho-servicos">
+            <h2>Serviços cadastrados</h2>
+            <p>Confira os serviços oferecidos pelo salão.</p>
+        </div>
+
+        <div class="tabela-servicos">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Preço</th>
+                        <th>Categoria</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var servico in servicos)
+                    {
+                        <tr>
+                            <td>@servico.Id</td>
+                            <td>@servico.Nome</td>
+                            <td>@servico.Descricao</td>
+                            <td>R$ @servico.Preco.ToString("F2")</td>
+                            <td>@servico.IdCategoria</td>
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</section>
+
+@code {
+
+    private List<Servico> servicos = new();
+
+    protected override void OnInitialized()
+    {
+        // Chama o DAO para buscar os dados no banco
+        servicos = ServicoDAO.Listar();
+    }
+
+}
