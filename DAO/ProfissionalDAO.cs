@@ -21,14 +21,7 @@ namespace Lumiere_Beauty.DAO
 
                 using var con = _conexao.GetConnection();
 
-                string sql = @"
-                    SELECT 
-                        id_profissional,
-                        nome_profi,
-                        telefone_profi,
-                        especialidade_profi
-                    FROM Profissional;
-                ";
+                string sql = "SELECT * from Profissional;";
 
                 using var comando = con.CreateCommand();
                 comando.CommandText = sql;

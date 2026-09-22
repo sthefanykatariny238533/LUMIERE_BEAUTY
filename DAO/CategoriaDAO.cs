@@ -21,12 +21,7 @@ namespace Lumiere_Beauty.DAO
 
                 using var con = _conexao.GetConnection();
 
-                string sql = @"
-                    SELECT 
-                        id_categoria,
-                        nome_catego
-                    FROM Categoria;
-                ";
+                string sql = "SELECT * from Categoria;";
 
                 using var comando = con.CreateCommand();
                 comando.CommandText = sql;
