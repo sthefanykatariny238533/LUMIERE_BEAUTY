@@ -2981,122 +2981,59 @@ body {
 
 /*============== CLIENTES ==================*/
 
+/* =========================
+   CLIENTES
+========================= */
+
 .pagina-clientes {
     background: #F9EDEE;
     min-height: 100vh;
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner-clientes {
+    background-image: url("/IMG/folhas.png");
+    background-size: cover;
+    background-position: center;
+    height: 220px;
     position: relative;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-    .pagina-clientes::before {
-        content: "";
+    /* BOTÃO VOLTAR */
+
+    .banner-clientes .voltar {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 340px;
-        background-image: url("/IMG/folhas.png");
-        background-size: cover;
-        background-position: center top;
-        background-repeat: no-repeat;
-        z-index: 0;
+        left: 25px;
+        top: 25px;
+        color: white;
+        font-size: 45px;
+        text-decoration: none;
+        z-index: 2;
     }
 
-
-    .pagina-clientes .cabecalho {
-        position: relative;
-        z-index: 1;
-        background: transparent !important;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 25px 55px;
-    }
-
-
-    .pagina-clientes .menu-navegacao {
-        display: flex;
-        align-items: center;
-        gap: 35px;
-    }
-
-        .pagina-clientes .menu-navegacao a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            padding-bottom: 8px;
+        .banner-clientes .voltar:hover {
+            color: #F4C8D0;
         }
 
-            .pagina-clientes .menu-navegacao a:hover {
-                color: #F4C8D0;
-            }
 
-            .pagina-clientes .menu-navegacao a.menu-ativo {
-                border-bottom: 2px solid #F4C8D0;
-            }
-
-    .pagina-clientes .lado-direito {
-        display: flex;
-        align-items: center;
-        gap: 25px;
-    }
-
-    .pagina-clientes .redes-sociais {
-        display: flex;
-        align-items: center;
-        gap: 18px;
-    }
-
-        .pagina-clientes .redes-sociais img {
-            width: 18px;
-            height: 18px;
-            object-fit: contain;
-        }
-
-    .pagina-clientes .perfil {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-        .pagina-clientes .perfil img {
-            width: 42px;
-            height: 42px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .pagina-clientes .perfil span {
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-        }
-
-    .pagina-clientes .banner-clientes {
-        position: relative;
-        z-index: 1;
-        background: transparent !important;
-        height: 220px;
-    }
-
-.banner-clientes .voltar {
-    position: absolute;
-    left: 25px;
-    top: 25px;
-    color: white;
-    font-size: 45px;
-    text-decoration: none;
-    z-index: 2;
-}
+/* =========================
+   TÍTULO
+========================= */
 
 .titulo-banner-clientes {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
 }
 
 .texto-banner-clientes {
@@ -3105,34 +3042,45 @@ body {
 
     .texto-banner-clientes h1 {
         color: #F4C8D0;
+        font-family: Georgia, serif;
         font-size: 50px;
+        font-weight: normal;
+        letter-spacing: 2px;
         margin: 0;
-        text-align: center;
-        border: none;
-        background: none;
-        padding: 0;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.35);
     }
 
     .texto-banner-clientes p {
         color: white;
-        margin-top: 8px;
-        text-align: center;
-        font-size: 22px;
+        margin: 10px 0 0;
+        font-size: 19px;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
     }
 
+
+/* LINHAS */
+
 .linha-clientes {
-    width: 130px;
+    width: 120px;
     height: 2px;
     background: #F4C8D0;
 }
 
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+
 .area-clientes {
-    position: relative;
-    z-index: 1;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 40px;
+    padding: 45px 30px 70px;
 }
+
+
+/* =========================
+   CABEÇALHO
+========================= */
 
 .cabecalho-clientes {
     text-align: center;
@@ -3141,22 +3089,29 @@ body {
 
     .cabecalho-clientes h2 {
         margin: 0;
-        font-size: 34px;
         color: #4D4D4D;
+        font-family: Georgia, serif;
+        font-size: 32px;
+        font-weight: normal;
     }
 
     .cabecalho-clientes p {
-        margin-top: 10px;
-        font-size: 18px;
-        color: #555;
+        margin: 10px 0 0;
+        color: #777;
+        font-size: 16px;
     }
+
+
+/* =========================
+   TABELA
+========================= */
 
 .tabela-clientes {
     width: 100%;
     background: white;
-    border-radius: 10px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px rgba(90, 50, 60, 0.10);
 }
 
     .tabela-clientes table {
@@ -3164,38 +3119,112 @@ body {
         border-collapse: collapse;
     }
 
+
+    /* CABEÇALHO */
+
+    .tabela-clientes thead {
+        background: #E7B5C4;
+    }
+
     .tabela-clientes th {
-        background: #E8B8C6;
-        color: #4D4D4D;
-        padding: 18px;
-        font-size: 19px;
+        padding: 18px 20px;
+        color: #4D3C41;
+        font-family: Georgia, serif;
+        font-size: 17px;
+        font-weight: normal;
         text-align: left;
     }
 
-    .tabela-clientes td {
-        padding: 18px;
-        font-size: 18px;
-        color: #444;
-        border-bottom: 1px solid #EAD9DD;
+
+    /* LINHAS */
+
+    .tabela-clientes tbody tr {
+        transition: background-color 0.2s ease;
     }
 
-    .tabela-clientes tbody tr:hover {
-        background: #FFF5F7;
+        .tabela-clientes tbody tr:hover {
+            background-color: #FFF5F7;
+        }
+
+
+    /* CÉLULAS */
+
+    .tabela-clientes td {
+        padding: 18px 20px;
+        color: #555;
+        font-size: 16px;
+        border-bottom: 1px solid #F0E1E5;
     }
+
+    .tabela-clientes tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+
+    /* =========================
+   ID
+========================= */
 
     .tabela-clientes th:first-child,
     .tabela-clientes td:first-child {
-        width: 80px;
+        width: 60px;
         text-align: center;
     }
 
-    .tabela-clientes th:nth-child(2) {
-        width: 40%;
+
+/* =========================
+   NOME
+========================= */
+
+.nome-cliente {
+    color: #4D4D4D;
+    font-weight: bold;
+}
+
+
+/* =========================
+   E-MAIL
+========================= */
+
+.email-cliente {
+    color: #777;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 800px) {
+
+    .area-clientes {
+        padding: 35px 15px 50px;
     }
 
-    .tabela-clientes th:nth-child(3) {
-        width: 40%;
+    .titulo-banner-clientes {
+        gap: 15px;
     }
+
+    .linha-clientes {
+        width: 55px;
+    }
+
+    .texto-banner-clientes h1 {
+        font-size: 38px;
+    }
+
+    .texto-banner-clientes p {
+        font-size: 16px;
+    }
+
+    .tabela-clientes {
+        overflow-x: auto;
+    }
+
+        .tabela-clientes table {
+            min-width: 600px;
+        }
+}
 
     /* ================ SERVIÇOS ==================*/
 
@@ -4064,5 +4093,198 @@ body {
 
         .tabela-agendamentos table {
             min-width: 850px;
+        }
+}
+
+/* ========== PROFISSIONAIS*/
+.pagina-profissionais {
+    background: #F9EDEE;
+    min-height: 100vh;
+}
+
+.banner-profissionais {
+    background-image: url("/IMG/folhas.png");
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .banner-profissionais .voltar {
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        color: white;
+        font-size: 45px;
+        text-decoration: none;
+        z-index: 2;
+    }
+
+        .banner-profissionais .voltar:hover {
+            color: #F4C8D0;
+        }
+
+.titulo-banner-profissionais {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.texto-banner-profissionais {
+    text-align: center;
+}
+
+    .texto-banner-profissionais h1 {
+        color: #F4C8D0;
+        font-family: Georgia, serif;
+        font-size: 50px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        margin: 0;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.35);
+    }
+
+    .texto-banner-profissionais p {
+        color: white;
+        margin: 10px 0 0;
+        font-size: 19px;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+.linha-profissionais {
+    width: 120px;
+    height: 2px;
+    background: #F4C8D0;
+}
+
+.area-profissionais {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 45px 30px 70px;
+}
+
+.cabecalho-profissionais {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .cabecalho-profissionais h2 {
+        margin: 0;
+        color: #4D4D4D;
+        font-family: Georgia, serif;
+        font-size: 32px;
+        font-weight: normal;
+    }
+
+    .cabecalho-profissionais p {
+        margin: 10px 0 0;
+        color: #777;
+        font-size: 16px;
+    }
+
+.tabela-profissionais {
+    width: 100%;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(90, 50, 60, 0.10);
+}
+
+    .tabela-profissionais table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .tabela-profissionais thead {
+        background: #E7B5C4;
+    }
+
+    .tabela-profissionais th {
+        padding: 18px 20px;
+        color: #4D3C41;
+        font-family: Georgia, serif;
+        font-size: 17px;
+        font-weight: normal;
+        text-align: left;
+    }
+
+    .tabela-profissionais tbody tr {
+        transition: background-color 0.2s ease;
+    }
+
+        .tabela-profissionais tbody tr:hover {
+            background-color: #FFF5F7;
+        }
+
+    .tabela-profissionais td {
+        padding: 18px 20px;
+        color: #555;
+        font-size: 16px;
+        border-bottom: 1px solid #F0E1E5;
+    }
+
+    .tabela-profissionais tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    .tabela-profissionais th:first-child,
+    .tabela-profissionais td:first-child {
+        width: 60px;
+        text-align: center;
+    }
+
+    .tabela-profissionais td:nth-child(2) {
+        color: #4D4D4D;
+        font-weight: bold;
+    }
+
+.telefone-profissional {
+    color: #777;
+}
+
+.especialidade-profissional {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background: #F9E1E7;
+    color: #A95D72;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+@media (max-width: 800px) {
+
+    .area-profissionais {
+        padding: 35px 15px 50px;
+    }
+
+    .titulo-banner-profissionais {
+        gap: 15px;
+    }
+
+    .linha-profissionais {
+        width: 55px;
+    }
+
+    .texto-banner-profissionais h1 {
+        font-size: 38px;
+    }
+
+    .texto-banner-profissionais p {
+        font-size: 16px;
+    }
+
+    .tabela-profissionais {
+        overflow-x: auto;
+    }
+
+        .tabela-profissionais table {
+            min-width: 650px;
         }
 }
