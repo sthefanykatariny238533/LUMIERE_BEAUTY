@@ -3823,3 +3823,246 @@ body {
         font-size: 16px;
     }
 }
+
+
+.pagina-agendamentos {
+    background: #F9EDEE;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner-agendamentos {
+    background-image: url("/IMG/folhas.png");
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    /* =========================
+   BOTÃO VOLTAR
+========================= */
+
+    .banner-agendamentos .voltar {
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        color: white;
+        font-size: 45px;
+        text-decoration: none;
+        z-index: 2;
+    }
+
+        .banner-agendamentos .voltar:hover {
+            color: #F4C8D0;
+        }
+
+
+/* =========================
+   TÍTULO
+========================= */
+
+.titulo-banner-agendamentos {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.texto-banner-agendamentos {
+    text-align: center;
+}
+
+    .texto-banner-agendamentos h1 {
+        color: #F4C8D0;
+        font-family: Georgia, serif;
+        font-size: 50px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        margin: 0;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.35);
+    }
+
+    .texto-banner-agendamentos p {
+        color: white;
+        margin: 10px 0 0;
+        font-size: 19px;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+
+/* =========================
+   LINHAS
+========================= */
+
+.linha-agendamentos {
+    width: 120px;
+    height: 2px;
+    background: #F4C8D0;
+}
+
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+
+.area-agendamentos {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 45px 30px 70px;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho-agendamentos {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .cabecalho-agendamentos h2 {
+        margin: 0;
+        color: #4D4D4D;
+        font-family: Georgia, serif;
+        font-size: 32px;
+        font-weight: normal;
+    }
+
+    .cabecalho-agendamentos p {
+        margin: 10px 0 0;
+        color: #777;
+        font-size: 16px;
+    }
+
+
+/* =========================
+   TABELA
+========================= */
+
+.tabela-agendamentos {
+    width: 100%;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(90, 50, 60, 0.10);
+}
+
+    .tabela-agendamentos table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+
+    /* CABEÇALHO DA TABELA */
+
+    .tabela-agendamentos thead {
+        background: #E7B5C4;
+    }
+
+    .tabela-agendamentos th {
+        padding: 18px 20px;
+        color: #4D3C41;
+        font-family: Georgia, serif;
+        font-size: 17px;
+        font-weight: normal;
+        text-align: left;
+    }
+
+
+    /* LINHAS */
+
+    .tabela-agendamentos tbody tr {
+        transition: background-color 0.2s ease;
+    }
+
+        .tabela-agendamentos tbody tr:hover {
+            background-color: #FFF5F7;
+        }
+
+
+    /* CÉLULAS */
+
+    .tabela-agendamentos td {
+        padding: 18px 20px;
+        color: #555;
+        font-size: 16px;
+        border-bottom: 1px solid #F0E1E5;
+    }
+
+    .tabela-agendamentos tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+
+    /* =========================
+   ID
+========================= */
+
+    .tabela-agendamentos th:first-child,
+    .tabela-agendamentos td:first-child {
+        width: 60px;
+        text-align: center;
+    }
+
+
+/* =========================
+   STATUS
+========================= */
+
+.status-agendamento {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background: #F9E1E7;
+    color: #A95D72;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 800px) {
+
+    .area-agendamentos {
+        padding: 35px 15px 50px;
+    }
+
+    .titulo-banner-agendamentos {
+        gap: 15px;
+    }
+
+    .linha-agendamentos {
+        width: 55px;
+    }
+
+    .texto-banner-agendamentos h1 {
+        font-size: 38px;
+    }
+
+    .texto-banner-agendamentos p {
+        font-size: 16px;
+    }
+
+    .tabela-agendamentos {
+        overflow-x: auto;
+    }
+
+        .tabela-agendamentos table {
+            min-width: 850px;
+        }
+}

@@ -1,3 +1,108 @@
-﻿@code {
+﻿@page "/agendamentos"
+@inject Lumiere_Beauty.DAO.AgendamentoDAO AgendamentoDAO
+
+<PageTitle>Agendamentos</PageTitle>
+
+<section class="pagina-agendamentos">
+
+    <section class="banner-agendamentos">
+
+        <a href="/" class="voltar">
+            &#8592;
+        </a>
+
+        <div class="titulo-banner-agendamentos">
+
+            <div class="linha-agendamentos"></div>
+
+            <div class="texto-banner-agendamentos">
+                <h1>AGENDAMENTOS</h1>
+                <p>Confira os agendamentos realizados.</p>
+            </div>
+
+            <div class="linha-agendamentos"></div>
+
+        </div>
+
+    </section>
+
+
+    <section class="area-agendamentos">
+
+        <div class="cabecalho-agendamentos">
+
+            <h2>Meus Agendamentos</h2>
+
+            <p>
+                Consulte abaixo os horários e serviços agendados.
+            </p>
+
+        </div>
+
+
+        <div class="tabela-agendamentos">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>ID</th>
+                        <th>Data</th>
+                        <th>Horário</th>
+                        <th>Status</th>
+                        <th>Cliente</th>
+                        <th>Profissional</th>
+                        <th>Serviço</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    @foreach (var agendamento in agendamentos)
+                    {
+                        <tr>
+
+                            <td>@agendamento.id</td>
+
+                            <td>@agendamento.data.ToString("dd/MM/yyyy")</td>
+
+                            <td>@agendamento.horario.ToString("HH\\:mm")</td>
+
+                            <td>
+                                <span class="status-agendamento">
+                                    @agendamento.status
+                                </span>
+                            </td>
+
+                            <td>@agendamento.id_cliente_fk</td>
+
+                            <td>@agendamento.id_profissional_fk</td>
+
+                            <td>@agendamento.id_servico_fk</td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+@code {
+
+    private List<Lumiere_Beauty.Models.Agendamento> agendamentos = new();
+
+    protected override void OnInitialized()
+    {
+        agendamentos = AgendamentoDAO.Listar();
+    }
 
 }
