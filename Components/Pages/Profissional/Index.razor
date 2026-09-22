@@ -1,0 +1,106 @@
+﻿@page "/profissionais"
+
+@using Lumiere_Beauty.Models
+@using Lumiere_Beauty.DAO
+
+@inject ProfissionalDAO ProfissionalDAO
+
+<PageTitle>Profissionais - Lumière Beauty</PageTitle>
+
+<section class="pagina-profissionais">
+
+    <section class="banner-profissionais">
+
+        <a href="/" class="voltar">
+            &#8592;
+        </a>
+
+        <div class="titulo-banner-profissionais">
+
+            <div class="linha-profissionais"></div>
+
+            <div class="texto-banner-profissionais">
+                <h1>PROFISSIONAIS</h1>
+                <p>Conheça nossa equipe de profissionais.</p>
+            </div>
+
+            <div class="linha-profissionais"></div>
+
+        </div>
+
+    </section>
+
+
+    <section class="area-profissionais">
+
+        <div class="cabecalho-profissionais">
+            <h2>Nossa equipe</h2>
+            <p>Confira os profissionais cadastrados no Lumière Beauty.</p>
+        </div>
+
+
+        <div class="tabela-profissionais">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Id</th>
+                        <th>Profissional</th>
+                        <th>Telefone</th>
+                        <th>Especialidade</th>
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+                    @foreach (var profissional in profissionais)
+                    {
+                        <tr>
+
+                            <td>
+                                @profissional.Id
+                            </td>
+
+                            <td class="nome-profissional">
+                                @profissional.Nome
+                            </td>
+
+                            <td class="telefone-profissional">
+                                @profissional.Telefone
+                            </td>
+
+                            <td>
+                                <span class="especialidade-profissional">
+                                    @profissional.Especialidade
+                                </span>
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+@code {
+
+    private List<Profissional> profissionais = new();
+
+    protected override void OnInitialized()
+    {
+        profissionais = ProfissionalDAO.Listar();
+    }
+
+}
+

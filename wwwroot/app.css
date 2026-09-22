@@ -3329,3 +3329,268 @@ body {
     .tabela-servicos th:nth-child(5) {
         width: 15%;
     }
+
+
+/* =========================
+   PROFISSIONAIS
+========================= */
+
+.pagina-profissionais {
+    background: #F9EDEE;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner-profissionais {
+    background-image: url("/IMG/folhas.png");
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+    /* BOTÃO VOLTAR */
+
+    .banner-profissionais .voltar {
+        position: absolute;
+        left: 25px;
+        top: 25px;
+        color: white;
+        font-size: 45px;
+        text-decoration: none;
+        z-index: 2;
+    }
+
+        .banner-profissionais .voltar:hover {
+            color: #F4C8D0;
+        }
+
+
+/* =========================
+   TÍTULO DO BANNER
+========================= */
+
+.titulo-banner-profissionais {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.texto-banner-profissionais {
+    text-align: center;
+}
+
+    .texto-banner-profissionais h1 {
+        color: #F4C8D0;
+        font-family: Georgia, serif;
+        font-size: 50px;
+        font-weight: normal;
+        letter-spacing: 2px;
+        margin: 0;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.35);
+    }
+
+    .texto-banner-profissionais p {
+        color: white;
+        margin: 10px 0 0;
+        font-size: 19px;
+        text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+
+/* LINHAS */
+
+.linha-profissionais {
+    width: 120px;
+    height: 2px;
+    background: #F4C8D0;
+}
+
+
+/* =========================
+   ÁREA PRINCIPAL
+========================= */
+
+.area-profissionais {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 45px 30px 70px;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.cabecalho-profissionais {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .cabecalho-profissionais h2 {
+        margin: 0;
+        color: #4D4D4D;
+        font-family: Georgia, serif;
+        font-size: 32px;
+        font-weight: normal;
+    }
+
+    .cabecalho-profissionais p {
+        margin: 10px 0 0;
+        color: #777;
+        font-size: 16px;
+    }
+
+
+/* =========================
+   TABELA
+========================= */
+
+.tabela-profissionais {
+    width: 100%;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(90, 50, 60, 0.10);
+}
+
+
+    /* TABELA */
+
+    .tabela-profissionais table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+
+    /* CABEÇALHO */
+
+    .tabela-profissionais thead {
+        background: #E7B5C4;
+    }
+
+    .tabela-profissionais th {
+        padding: 18px 20px;
+        color: #4D3C41;
+        font-family: Georgia, serif;
+        font-size: 17px;
+        font-weight: normal;
+        text-align: left;
+    }
+
+
+    /* LINHAS */
+
+    .tabela-profissionais tbody tr {
+        transition: background-color 0.2s ease;
+    }
+
+        .tabela-profissionais tbody tr:hover {
+            background-color: #FFF5F7;
+        }
+
+
+    /* CÉLULAS */
+
+    .tabela-profissionais td {
+        padding: 18px 20px;
+        color: #555;
+        font-size: 16px;
+        border-bottom: 1px solid #F0E1E5;
+    }
+
+    .tabela-profissionais tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+
+    /* =========================
+   ID
+========================= */
+
+    .tabela-profissionais th:first-child,
+    .tabela-profissionais td:first-child {
+        width: 60px;
+        text-align: center;
+    }
+
+
+    /* =========================
+   NOME
+========================= */
+
+    .tabela-profissionais td:nth-child(2) {
+        color: #4D4D4D;
+        font-weight: bold;
+    }
+
+
+/* =========================
+   TELEFONE
+========================= */
+
+.telefone-profissional {
+    color: #777;
+}
+
+
+/* =========================
+   ESPECIALIDADE
+========================= */
+
+.especialidade-profissional {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background: #F9E1E7;
+    color: #A95D72;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 800px) {
+
+    .area-profissionais {
+        padding: 35px 15px 50px;
+    }
+
+    .titulo-banner-profissionais {
+        gap: 15px;
+    }
+
+    .linha-profissionais {
+        width: 55px;
+    }
+
+    .texto-banner-profissionais h1 {
+        font-size: 38px;
+    }
+
+    .texto-banner-profissionais p {
+        font-size: 16px;
+    }
+
+    .tabela-profissionais {
+        overflow-x: auto;
+    }
+
+        .tabela-profissionais table {
+            min-width: 650px;
+        }
+}
