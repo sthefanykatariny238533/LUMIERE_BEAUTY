@@ -1,0 +1,106 @@
+﻿@page "/clientes/cadastro"
+@rendermode InteractiveServer
+
+@using Lumiere_Beauty.Models
+@using Lumiere_Beauty.DAO
+
+@inject ClienteDAO dao
+@inject NavigationManager NavigationManager
+
+<PageTitle>Novo Cliente - Lumière Beauty</PageTitle>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2 class="fw-bold mb-1">Cadastro de Cliente</h2>
+    </div>
+</div>
+
+<div class="custom-table-card p-4">
+
+    <EditForm Model="cliente" OnValidSubmit="Salvar">
+
+        <DataAnnotationsValidator />
+
+        <ValidationSummary class="alert alert-danger" />
+
+        <div class="row mb-3">
+
+            <div class="col-md-12">
+
+                <label for="nome" class="form-label">
+                    Nome Completo
+                </label>
+
+                <InputText id="nome"
+                           class="form-control"
+                           @bind-Value="cliente.NomeCompleto" />
+
+                <ValidationMessage For="() => cliente.NomeCompleto" />
+
+            </div>
+
+        </div>
+
+        <div class="row mb-3">
+
+            <div class="col-md-6">
+
+                <label for="email" class="form-label">
+                    E-mail
+                </label>
+
+                <InputText id="email"
+                           type="email"
+                           class="form-control"
+                           @bind-Value="cliente.Email" />
+
+                <ValidationMessage For="() => cliente.Email" />
+
+            </div>
+
+            <div class="col-md-6">
+
+                <label for="senha" class="form-label">
+                    Senha
+                </label>
+
+                <InputText id="senha"
+                           type="password"
+                           class="form-control"
+                           @bind-Value="cliente.Senha" />
+
+                <ValidationMessage For="() => cliente.Senha" />
+
+            </div>
+
+        </div>
+
+        <div class="d-flex gap-2">
+
+            <button type="submit" class="btn btn-primary">
+                <i class="bi bi-check-lg"></i> Salvar
+            </button>
+
+            <a href="/clientes" class="btn btn-light border">
+                Cancelar
+            </a>
+
+        </div>
+
+    </EditForm>
+
+</div>
+
+@code {
+
+    private Cliente cliente = new();
+
+    private void Salvar()
+    {
+        dao.Inserir(cliente);
+
+        // Retorna para a página de clientes após salvar
+        NavigationManager.NavigateTo("/clientes");
+    }
+
+}

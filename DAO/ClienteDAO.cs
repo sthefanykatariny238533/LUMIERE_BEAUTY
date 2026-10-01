@@ -18,7 +18,6 @@ namespace Lumiere_Beauty.DAO
             {
                 var lista = new List<Cliente>();
 
-                // Buscando e abrindo a Conexão com o banco de dados
                 using var con = _conexao.GetConnection();
 
                 string sql = "SELECT * FROM Cliente";
@@ -40,6 +39,32 @@ namespace Lumiere_Beauty.DAO
                 }
 
                 return lista;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public void Inserir(Cliente cliente)
+        {
+            try
+            {
+                using var con = _conexao.GetConnection();
+
+                string sql = @"INSERT INTO Cliente
+                    (nome_completo_cli, email_cli, senha_cli)
+                    VALUES
+                    (@nome, @email, @senha)";
+
+                using var comando = con.CreateCommand();
+                comando.CommandText = sql;
+
+                comando.Parameters.AddWithValue("@nome", cliente.NomeCompleto);
+                comando.Parameters.AddWithValue("@email", cliente.Email);
+                comando.Parameters.AddWithValue("@senha", cliente.Senha);
+
+                comando.ExecuteNonQuery();
             }
             catch
             {
