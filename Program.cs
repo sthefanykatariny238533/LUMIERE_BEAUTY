@@ -12,6 +12,8 @@ builder.Services.AddScoped<Conexao>();
 builder.Services.AddScoped<ClienteDAO>();
 builder.Services.AddScoped<AgendamentoDAO>();
 builder.Services.AddScoped<ServicoDAO>();
+builder.Services.AddScoped<ProfissionalDAO>();
+builder.Services.AddScoped<CategoriaDAO>();
 
 
 

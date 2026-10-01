@@ -9,117 +9,90 @@
 
 <section class="pagina-clientes">
 
-    <header class="cabecalho">
-
-        <nav class="menu-navegacao">
-
-            <a href="/">
-                PÁGINA INICIAL
-            </a>
-
-            <a href="/login">
-                LOGIN
-            </a>
-
-            <a href="/agendamentos">
-                MEUS AGENDAMENTOS
-            </a>
-
-            <a class="menu-ativo" href="/clientes">
-                CONSULTAR CLIENTES
-            </a>
-
-        </nav>
-
-        <div class="lado-direito">
-
-            <div class="redes-sociais">
-
-                <a href="https://www.instagram.com/" target="_blank">
-                    <img src="/IMG/download.png" alt="Instagram">
-                </a>
-
-                <a href="https://br.pinterest.com/" target="_blank">
-                    <img src="/IMG/pinterest.png" alt="Pinterest">
-                </a>
-
-                <a href="https://wa.me/5500000000000" target="_blank">
-                    <img src="/IMG/whatsapp.png" alt="WhatsApp">
-                </a>
-
-            </div>
-
-            <div class="perfil">
-
-                <img src="/IMG/perfil.png" alt="Perfil">
-
-                <span>Sthefany</span>
-
-            </div>
-        </div>
-    </header>
-
-
     <section class="banner-clientes">
+
+        <a href="/" class="voltar">
+            &#8592;
+        </a>
 
         <div class="titulo-banner-clientes">
 
             <div class="linha-clientes"></div>
 
             <div class="texto-banner-clientes">
-
                 <h1>CLIENTES</h1>
-
                 <p>Consulta de clientes cadastrados.</p>
             </div>
 
             <div class="linha-clientes"></div>
+
         </div>
+
     </section>
+
 
     <section class="area-clientes">
 
         <div class="cabecalho-clientes">
-
             <h2>Clientes cadastrados</h2>
-
-            <p> Confira os clientes registrados no sistema Lumière Beauty.</p>
+            <p>Confira os clientes registrados no sistema Lumière Beauty.</p>
         </div>
 
 
         <div class="tabela-clientes">
+
             <table>
+
                 <thead>
+
                     <tr>
                         <th>Id</th>
                         <th>Nome completo</th>
                         <th>E-mail</th>
                     </tr>
+
                 </thead>
+
 
                 <tbody>
 
                     @foreach (var cliente in clientes)
                     {
                         <tr>
-                            <td>@cliente.Id</td>
-                            <td>@cliente.NomeCompleto</td>
-                            <td>@cliente.Email</td>
+
+                            <td>
+                                @cliente.Id
+                            </td>
+
+                            <td class="nome-cliente">
+                                @cliente.NomeCompleto
+                            </td>
+
+                            <td class="email-cliente">
+                                @cliente.Email
+                            </td>
+
                         </tr>
                     }
+
                 </tbody>
+
             </table>
+
         </div>
+
     </section>
+
 </section>
 
 
 @code {
+
     private List<Cliente> clientes = new();
 
     protected override void OnInitialized()
     {
-        // Chama o DAO para buscar os dados no banco
         clientes = ClienteDAO.Listar();
     }
+
 }
