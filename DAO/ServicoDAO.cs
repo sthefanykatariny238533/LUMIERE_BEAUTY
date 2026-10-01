@@ -18,10 +18,10 @@ namespace Lumiere_Beauty.DAO
             {
                 var lista = new List<Servico>();
 
-                // Buscando e abrindo a conexão com o banco de dados
                 using var con = _conexao.GetConnection();
 
                 string sql = "SELECT * FROM Servico";
+
                 using var comando = con.CreateCommand();
                 comando.CommandText = sql;
 
@@ -41,6 +41,35 @@ namespace Lumiere_Beauty.DAO
                 }
 
                 return lista;
+            }
+            catch
+            {
+                throw;
+            }
+        }
+
+        public void Inserir(Servico servico)
+        {
+            try
+            {
+                using var con = _conexao.GetConnection();
+
+                string sql = @"
+                    INSERT INTO Servico
+                    (nome_serv, descricao, preco, id_categoria_fk)
+                    VALUES
+                    (@nome, @descricao, @preco, @idCategoria)";
+
+                using var comando = con.CreateCommand();
+
+                comando.CommandText = sql;
+
+                comando.Parameters.AddWithValue("@nome", servico.Nome);
+                comando.Parameters.AddWithValue("@descricao", servico.Descricao);
+                comando.Parameters.AddWithValue("@preco", servico.Preco);
+                comando.Parameters.AddWithValue("@idCategoria", servico.IdCategoria);
+
+                comando.ExecuteNonQuery();
             }
             catch
             {
