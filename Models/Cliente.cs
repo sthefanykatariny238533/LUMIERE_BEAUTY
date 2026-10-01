@@ -11,8 +11,8 @@ namespace Lumiere_Beauty.Models
         public string NomeCompleto { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "O e-mail é obrigatório.")]
-        [EmailAddress(ErrorMessage = "Digite um e-mail válido.")]
         [StringLength(200, ErrorMessage = "O e-mail deve ter no máximo 200 caracteres.")]
+        [EmailAddress(ErrorMessage = "Digite um e-mail válido.")]
         public string Email { get; set; } = string.Empty;
 
         [Required(ErrorMessage = "A senha é obrigatória.")]

@@ -18,6 +18,7 @@ namespace Lumiere_Beauty.DAO
             {
                 var lista = new List<Cliente>();
 
+                // Buscando e abrindo a Conexão com o banco de dados
                 using var con = _conexao.GetConnection();
 
                 string sql = "SELECT * FROM Cliente";
