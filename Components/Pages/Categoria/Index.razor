@@ -9,19 +9,19 @@
 
 <PageTitle>Categorias - Lumière Beauty</PageTitle>
 
-<section class="pagina-clientes">
+<section class="pagina-categorias">
 
-    <section class="banner-clientes">
+    <section class="banner-categorias">
 
         <a href="/" class="voltar">
             &#8592;
         </a>
 
-        <div class="titulo-banner-categoria">
+        <div class="titulo-banner-categorias">
 
             <div class="linha-categorias"></div>
 
-            <div class="texto-banner-categoria">
+            <div class="texto-banner-categorias">
                 <h1>CATEGORIAS</h1>
                 <p>Consulta de categorias cadastradas.</p>
             </div>
@@ -32,7 +32,8 @@
 
     </section>
 
-    <section class="area-clientes">
+
+    <section class="area-categorias">
 
         <div class="d-flex justify-content-between align-items-center mb-4">
 
@@ -55,22 +56,27 @@
 
         </div>
 
-        <div class="tabela-clientes">
+
+        <div class="tabela-categorias">
 
             <table>
 
                 <thead>
+
                     <tr>
                         <th>Id</th>
                         <th>Categoria</th>
                     </tr>
+
                 </thead>
+
 
                 <tbody>
 
                     @foreach (var categoria in categorias)
                     {
                         <tr>
+
                             <td>
                                 @categoria.Id
                             </td>
@@ -78,6 +84,7 @@
                             <td class="nome-categoria">
                                 @categoria.Nome
                             </td>
+
                         </tr>
                     }
 
@@ -90,6 +97,7 @@
     </section>
 
 </section>
+
 
 @code {
 

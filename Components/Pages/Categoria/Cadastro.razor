@@ -1,4 +1,5 @@
 ﻿@page "/categoria/cadastro"
+
 @rendermode InteractiveServer
 
 @using Lumiere_Beauty.Models
@@ -9,57 +10,72 @@
 
 <PageTitle>Nova Categoria - Lumière Beauty</PageTitle>
 
-<div class="d-flex justify-content-between align-items-center mb-4">
+<section class="pagina-categoria-cadastro">
 
-    <div>
-        <h2 class="fw-bold mb-1">Cadastro de Categoria</h2>
-        <p>Cadastre uma nova categoria no sistema.</p>
+    <div class="cabecalho-categoria-cadastro">
+
+        <h2>
+            Cadastro de Categoria
+        </h2>
+
+        <p>
+            Cadastre uma nova categoria no sistema.
+        </p>
+
     </div>
 
-</div>
 
-<div class="custom-table-card p-4">
+    <div class="categoria-card">
 
-    <EditForm Model="categoria" OnValidSubmit="Salvar">
+        <EditForm Model="categoria" OnValidSubmit="Salvar">
 
-        <DataAnnotationsValidator />
+            <DataAnnotationsValidator />
 
-        <ValidationSummary class="alert alert-danger" />
+            <ValidationSummary class="categoria-validation-summary" />
 
-        <div class="row mb-3">
+            <div class="categoria-campo">
 
-            <div class="col-md-12">
-
-                <label for="nome" class="form-label">
+                <label for="nome" class="categoria-label">
                     Nome da Categoria
                 </label>
 
                 <InputText id="nome"
-                           class="form-control"
+                           class="categoria-input"
                            @bind-Value="categoria.Nome" />
 
-                <ValidationMessage For="() => categoria.Nome" />
+                <ValidationMessage For="() => categoria.Nome"
+                                   class="categoria-validation" />
 
             </div>
 
-        </div>
 
-        <div class="d-flex gap-2">
+            <div class="categoria-botoes">
 
-            <button type="submit" class="btn btn-primary">
-                <i class="bi bi-check-lg"></i>
-                Salvar
-            </button>
+                <button type="submit"
+                        class="categoria-btn-salvar">
 
-            <a href="/categoria" class="btn btn-light border">
-                Cancelar
-            </a>
+                    <i class="bi bi-check-lg"></i>
+                    Salvar
 
-        </div>
+                </button>
 
-    </EditForm>
 
-</div>
+                <a href="/categoria"
+                       class="categoria-btn-cancelar">
+
+                    <i class="bi bi-x-lg"></i>
+                    Cancelar
+
+                </a>
+
+            </div>
+
+        </EditForm>
+
+    </div>
+
+</section>
+
 
 @code {
 
