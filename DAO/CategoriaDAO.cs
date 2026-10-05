@@ -52,16 +52,13 @@ namespace Lumiere_Beauty.DAO
             {
                 using var con = _conexao.GetConnection();
 
-                string sql = @"INSERT INTO Categoria
-                    (nome_catego)
-                    VALUES
-                    (@nome)";
+                string sql = @"INSERT INTO Categoria (nome_catego)
+                    VALUES (@nome)";
 
                 using var comando = con.CreateCommand();
                 comando.CommandText = sql;
 
                 comando.Parameters.AddWithValue("@nome", categoria.Nome);
-
                 comando.ExecuteNonQuery();
             }
             catch
