@@ -1,5 +1,6 @@
 ﻿using Lumiere_Beauty.Configs;
 using Lumiere_Beauty.Models;
+using MySql.Data.MySqlClient;
 
 namespace Lumiere_Beauty.DAO
 {
@@ -20,7 +21,7 @@ namespace Lumiere_Beauty.DAO
 
                 using var con = _conexao.GetConnection();
 
-                string sql = "SELECT id_categoria, nome_catego FROM Categoria";
+                string sql = "SELECT * from Categoria;";
 
                 using var comando = con.CreateCommand();
                 comando.CommandText = sql;
@@ -32,36 +33,16 @@ namespace Lumiere_Beauty.DAO
                     var categoria = new Categoria();
 
                     categoria.Id = leitor.GetInt32("id_categoria");
-                    categoria.Nome = leitor.GetString("nome_catego");
+
+                    if (!leitor.IsDBNull(leitor.GetOrdinal("nome_catego")))
+                    {
+                        categoria.Nome = leitor.GetString("nome_catego");
+                    }
 
                     lista.Add(categoria);
                 }
 
                 return lista;
-            }
-            catch
-            {
-                throw;
-            }
-        }
-
-        public void Inserir(Categoria categoria)
-        {
-            try
-            {
-                using var con = _conexao.GetConnection();
-
-                string sql = @"INSERT INTO Categoria
-                    (nome_catego)
-                    VALUES
-                    (@nome)";
-
-                using var comando = con.CreateCommand();
-                comando.CommandText = sql;
-
-                comando.Parameters.AddWithValue("@nome", categoria.Nome);
-
-                comando.ExecuteNonQuery();
             }
             catch
             {
