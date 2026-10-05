@@ -1,0 +1,105 @@
+﻿@page "/categorias"
+
+@using Lumiere_Beauty.Models
+@using Lumiere_Beauty.DAO
+
+@inject CategoriaDAO CategoriaDAO
+
+<PageTitle>Categorias - Lumière Beauty</PageTitle>
+
+<section class="pagina-categorias">
+
+    <!-- BANNER -->
+    <section class="banner-categorias">
+
+        <a href="/" class="voltar">
+            &#8592;
+        </a>
+
+        <div class="titulo-banner-categorias">
+
+            <div class="linha-categorias"></div>
+
+            <div class="texto-banner-categorias">
+                <h1>CATEGORIAS</h1>
+                <p>Confira as categorias de serviços disponíveis.</p>
+            </div>
+
+            <div class="linha-categorias"></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTEÚDO -->
+    <section class="area-categorias">
+
+        <div class="cabecalho-categorias">
+
+            <div class="titulo-categorias">
+                <h2>Categorias cadastradas</h2>
+
+                <p>
+                    Confira as categorias disponíveis no Lumière Beauty.
+                </p>
+            </div>
+
+            <a href="/categorias/cadastro" class="btn-nova-categoria">
+                Nova Categoria
+            </a>
+
+        </div>
+
+        <!-- TABELA -->
+        <div class="tabela-categorias">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Categoria</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var categoria in categorias)
+                    {
+                        <tr>
+
+                            <td>
+                                @categoria.Id
+                            </td>
+
+                            <td>
+                                <span class="categoria-badge">
+                                    @categoria.Nome
+                                </span>
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</section>
+
+
+@code {
+
+    private List<Categoria> categorias = new();
+
+    protected override void OnInitialized()
+    {
+        categorias = CategoriaDAO.Listar();
+    }
+
+}
