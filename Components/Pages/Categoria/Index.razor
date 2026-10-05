@@ -7,47 +7,67 @@
 
 <PageTitle>Categorias - Lumière Beauty</PageTitle>
 
-<section class="pagina-categorias">
+<section class="pagina-clientes">
 
-    <section class="banner-categorias">
+    <section class="banner-clientes">
 
         <a href="/" class="voltar">
             &#8592;
         </a>
 
-        <div class="titulo-banner-categorias">
+        <div class="titulo-banner-clientes">
 
-            <div class="linha-categorias"></div>
+            <div class="linha-clientes"></div>
 
-            <div class="texto-banner-categorias">
+            <div class="texto-banner-clientes">
                 <h1>CATEGORIAS</h1>
-                <p>Confira as categorias de serviços disponíveis.</p>
+                <p>Consulta de categorias cadastradas.</p>
             </div>
 
-            <div class="linha-categorias"></div>
+            <div class="linha-clientes"></div>
 
         </div>
 
     </section>
 
+    <section class="area-clientes">
 
-    <section class="area-categorias">
+        <div class="cabecalho-clientes">
 
-        <div class="cabecalho-categorias">
-            <h2>Categorias cadastradas</h2>
-            <p>Confira as categorias disponíveis no Lumière Beauty.</p>
+            <div class="texto-clientes">
+
+                <h2 class="fw-bold mb-1">
+                    Categorias cadastradas
+                </h2>
+
+                <p>
+                    Confira as categorias disponíveis no Lumière Beauty.
+                </p>
+
+            </div>
+
+            <div class="botao-categoria">
+
+                <a href="/categorias/cadastro" class="btn btn-primary">
+                    <i class="bi bi-plus-lg"></i>
+                    Nova Categoria
+                </a>
+
+            </div>
+
         </div>
 
-
-        <div class="tabela-categorias">
+        <div class="tabela-clientes">
 
             <table>
 
                 <thead>
+
                     <tr>
                         <th>Id</th>
                         <th>Categoria</th>
                     </tr>
+
                 </thead>
 
                 <tbody>
@@ -61,9 +81,7 @@
                             </td>
 
                             <td class="nome-categoria">
-                                <span>
-                                    @categoria.Nome
-                                </span>
+                                @categoria.Nome
                             </td>
 
                         </tr>
@@ -78,7 +96,6 @@
     </section>
 
 </section>
-
 
 @code {
 
