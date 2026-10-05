@@ -1,105 +1,75 @@
-﻿@page "/categorias"
+﻿@page "/categoria/cadastro"
+@rendermode InteractiveServer
 
 @using Lumiere_Beauty.Models
 @using Lumiere_Beauty.DAO
 
-@inject CategoriaDAO CategoriaDAO
+@inject CategoriaDAO dao
+@inject NavigationManager NavigationManager
 
-<PageTitle>Categorias - Lumière Beauty</PageTitle>
+<PageTitle>Nova Categoria - Lumière Beauty</PageTitle>
 
-<section class="pagina-categorias">
+<div class="d-flex justify-content-between align-items-center mb-4">
 
-    <!-- BANNER -->
-    <section class="banner-categorias">
+    <div>
+        <h2 class="fw-bold mb-1">Cadastro de Categoria</h2>
+        <p>Cadastre uma nova categoria no sistema.</p>
+    </div>
 
-        <a href="/" class="voltar">
-            &#8592;
-        </a>
+</div>
 
-        <div class="titulo-banner-categorias">
+<div class="custom-table-card p-4">
 
-            <div class="linha-categorias"></div>
+    <EditForm Model="categoria" OnValidSubmit="Salvar">
 
-            <div class="texto-banner-categorias">
-                <h1>CATEGORIAS</h1>
-                <p>Confira as categorias de serviços disponíveis.</p>
+        <DataAnnotationsValidator />
+
+        <ValidationSummary class="alert alert-danger" />
+
+        <div class="row mb-3">
+
+            <div class="col-md-12">
+
+                <label for="nome" class="form-label">
+                    Nome da Categoria
+                </label>
+
+                <InputText id="nome"
+                           class="form-control"
+                           @bind-Value="categoria.Nome" />
+
+                <ValidationMessage For="() => categoria.Nome" />
+
             </div>
-
-            <div class="linha-categorias"></div>
 
         </div>
 
-    </section>
+        <div class="d-flex gap-2">
 
+            <button type="submit" class="btn btn-primary">
+                <i class="bi bi-check-lg"></i>
+                Salvar
+            </button>
 
-    <!-- CONTEÚDO -->
-    <section class="area-categorias">
-
-        <div class="cabecalho-categorias">
-
-            <div class="titulo-categorias">
-                <h2>Categorias cadastradas</h2>
-
-                <p>
-                    Confira as categorias disponíveis no Lumière Beauty.
-                </p>
-            </div>
-
-            <a href="/categorias/cadastro" class="btn-nova-categoria">
-                Nova Categoria
+            <a href="/categoria" class="btn btn-light border">
+                Cancelar
             </a>
 
         </div>
 
-        <!-- TABELA -->
-        <div class="tabela-categorias">
+    </EditForm>
 
-            <table>
-
-                <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Categoria</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-                    @foreach (var categoria in categorias)
-                    {
-                        <tr>
-
-                            <td>
-                                @categoria.Id
-                            </td>
-
-                            <td>
-                                <span class="categoria-badge">
-                                    @categoria.Nome
-                                </span>
-                            </td>
-
-                        </tr>
-                    }
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-    </section>
-
-</section>
-
+</div>
 
 @code {
 
-    private List<Categoria> categorias = new();
+    private Categoria categoria = new();
 
-    protected override void OnInitialized()
+    private void Salvar()
     {
-        categorias = CategoriaDAO.Listar();
+        dao.Inserir(categoria);
+
+        NavigationManager.NavigateTo("/categoria");
     }
 
 }
